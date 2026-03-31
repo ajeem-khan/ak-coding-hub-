@@ -13,6 +13,18 @@ body {
     border: none;
 }
 
+.filters {
+    margin: 20px;
+}
+
+.filters button {
+    margin: 5px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    background: orange;
+}
+
 .container {
     display: flex;
     flex-wrap: wrap;
