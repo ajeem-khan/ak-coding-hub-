@@ -11,9 +11,16 @@
 
 <input type="text" id="search" placeholder="Search code..." onkeyup="searchCode()">
 
+<div class="filters">
+    <button onclick="filterCode('all')">All</button>
+    <button onclick="filterCode('python')">Python</button>
+    <button onclick="filterCode('html')">HTML</button>
+    <button onclick="filterCode('js')">JavaScript</button>
+</div>
+
 <div class="container">
 
-    <div class="code-card">
+    <div class="code-card python">
         <h2>Python Code 🐍</h2>
         <button onclick="copyCode('code1')">Copy</button>
         <pre id="code1">
@@ -21,7 +28,7 @@ print("Hello World")
         </pre>
     </div>
 
-    <div class="code-card">
+    <div class="code-card html">
         <h2>HTML Code 🌐</h2>
         <button onclick="copyCode('code2')">Copy</button>
         <pre id="code2">
@@ -29,7 +36,7 @@ print("Hello World")
         </pre>
     </div>
 
-    <div class="code-card">
+    <div class="code-card js">
         <h2>JavaScript Code ⚡</h2>
         <button onclick="copyCode('code3')">Copy</button>
         <pre id="code3">
