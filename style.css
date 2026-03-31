@@ -1,39 +1,44 @@
 body {
     margin: 0;
-    background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+    background: #0f0f0f;
     color: white;
     font-family: Arial;
     text-align: center;
+    transition: 0.3s;
 }
 
-/* Search bar */
+/* Light mode */
+body.light {
+    background: white;
+    color: black;
+}
+
+/* Toggle button */
+button {
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+}
+
+/* Search */
 #search {
     padding: 12px;
     width: 60%;
     margin: 20px;
     border-radius: 20px;
     border: none;
-    outline: none;
 }
 
 /* Filters */
-.filters {
-    margin: 20px;
-}
-
 .filters button {
-    margin: 5px;
-    padding: 10px 15px;
-    border: none;
-    cursor: pointer;
     background: #333;
     color: white;
-    border-radius: 20px;
-    transition: 0.3s;
 }
 
-.filters button:hover {
-    background: cyan;
+body.light .filters button {
+    background: #ddd;
     color: black;
 }
 
@@ -44,38 +49,23 @@ body {
     justify-content: center;
 }
 
-/* Card Design */
+/* Cards */
 .code-card {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
+    background: rgba(255,255,255,0.05);
     padding: 20px;
     margin: 15px;
     border-radius: 15px;
     width: 260px;
     transition: 0.3s;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
-/* Hover Animation 🔥 */
+body.light .code-card {
+    background: #f0f0f0;
+}
+
+/* Hover */
 .code-card:hover {
-    transform: translateY(-10px) scale(1.03);
-    box-shadow: 0 0 20px cyan;
-}
-
-/* Button */
-button {
-    background: cyan;
-    border: none;
-    padding: 8px 12px;
-    cursor: pointer;
-    margin-bottom: 10px;
-    border-radius: 10px;
-    transition: 0.3s;
-}
-
-button:hover {
-    background: white;
-    color: black;
+    transform: scale(1.05);
 }
 
 /* Code box */
@@ -83,5 +73,8 @@ pre {
     background: #111;
     padding: 10px;
     border-radius: 10px;
-    overflow-x: auto;
+}
+
+body.light pre {
+    background: #ddd;
 }
