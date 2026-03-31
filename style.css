@@ -5,18 +5,26 @@ body {
     text-align: center;
 }
 
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .code-card {
     background: #111;
     padding: 20px;
-    margin: 20px;
+    margin: 15px;
     border-radius: 10px;
+    width: 250px;
 }
 
 button {
     background: cyan;
     border: none;
-    padding: 10px;
+    padding: 8px;
     cursor: pointer;
+    margin-bottom: 10px;
 }
 
 pre {
