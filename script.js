@@ -32,7 +32,22 @@ function filterCode(category) {
     }
 }
 
-/* 🌙 Toggle Mode */
+/* 🌙 Toggle Mode + Save */
 function toggleMode() {
     document.body.classList.toggle("light");
+
+    if (document.body.classList.contains("light")) {
+        localStorage.setItem("mode", "light");
+    } else {
+        localStorage.setItem("mode", "dark");
+    }
+}
+
+/* Load saved mode */
+window.onload = function () {
+    let savedMode = localStorage.getItem("mode");
+
+    if (savedMode === "light") {
+        document.body.classList.add("light");
+    }
 }
