@@ -13,7 +13,7 @@ body.light {
     color: black;
 }
 
-/* Toggle button */
+/* Button */
 button {
     padding: 10px;
     margin: 10px;
@@ -77,4 +77,19 @@ pre {
 
 body.light pre {
     background: #ddd;
+}
+
+/* 📱 MOBILE RESPONSIVE */
+@media (max-width: 600px) {
+    #search {
+        width: 90%;
+    }
+
+    .code-card {
+        width: 90%;
+    }
+
+    button {
+        width: 90%;
+    }
 }
